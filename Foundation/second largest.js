@@ -18,4 +18,4 @@ function findSecondLargestNumber(arr) {
 }
 const arr = [2, 9, 17, 0, 1, 10, 4, 8,10];
 const secondLargestNumber = findSecondLargestNumber(arr);
-console.log(secondLargestNumber);
+console.log(secondLargestNumber); // Output: 9
