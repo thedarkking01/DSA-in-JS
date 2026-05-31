@@ -15,3 +15,6 @@ function selectionSort(arr) {
     }
     return arr;
 }
+
+// time complexity: O(n^2) in all cases (worst, average, and best) because it always requires two nested loops to complete the sorting process.
+// space complexity: O(1) - it is an in-place sorting algorithm, meaning it does not require additional space for another array.

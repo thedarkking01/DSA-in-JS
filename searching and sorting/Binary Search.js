@@ -18,3 +18,6 @@ var search = function(nums, target) {
     }
     return -1
 };
+
+// time complexity: O(log n) in all cases (worst, average, and best) because it divides the search space in half with each iteration.
+// space complexity: O(1) - it uses a constant amount of space regardless of the input size.

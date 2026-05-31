@@ -20,3 +20,6 @@ function bubbleSort(arr) {
 }
 
 console.log(bubbleSort([5, 2, 0, 3, 6, 7]));
+
+// time complexity: O(n^2) in the worst and average case, O(n) in the best case (when the array is already sorted)
+// space complexity: O(1) - it is an in-place sorting algorithm, meaning it does not require additional space for another array.
