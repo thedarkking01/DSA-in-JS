@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/linked-list-cycle/description/
+
 // Approach 1: Hashmap
 function hasCycle(head) {
     let seen = new Set();
