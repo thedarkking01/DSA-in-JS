@@ -2,6 +2,7 @@
  * @param {string} s
  * @return {number}
  */
+// approch 1: use a map to store the frequency of each character and then find the max vowel and consonant inside the loop
 var maxFreqSum = function(s) {
     let map={}
     for(let i=0;i<s.length;i++){
