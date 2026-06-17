@@ -30,3 +30,39 @@ var searchRange = function(arr, target) {
     if(arr[l]==target) ans[1]=l
     return ans
 };
+
+// approch 2
+var searchRange = function(arr, target) {
+    let l=0
+    let r=arr.length-1
+    let ans=[-1,-1]
+    while(l<=r){
+        let m=Math.floor((l+r)/2)
+        if(arr[m]==target){
+            ans[0]=m
+            r=m-1
+        }else if(arr[m]<target){
+            l=m+1
+        }
+        else{
+            r=m-1
+        }
+    }
+
+    l=0
+    r=arr.length-1
+    while(l<=r){
+        let m=Math.ceil((l+r)/2)
+        if(arr[m]==target){
+            ans[1]=m
+            l=m+1
+        }else if(arr[m]>target){
+            r=m-1
+        }
+        else{
+            l=m+1
+        }
+    }
+
+    return ans
+};
