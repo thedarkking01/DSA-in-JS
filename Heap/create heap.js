@@ -1,0 +1,35 @@
+class Minheap {
+    constructor() {
+        this.heap = [5,9,8]
+    }
+    getLeftChildIndex(i) {
+        return (2 * i) + 1
+    }
+    getRightChildIndex(i) {
+        return (2 * i) + 2
+    }
+    getParentIndex(i) {
+        return Math.floor((i-1)/2)
+    }
+    insert(val) {
+        this.heap.push(val)
+        let lastIndex = this.heap.length - 1
+        this.heapifyUp(lastIndex)
+    }
+
+    heapifyUp(i) {
+        while (i > 0) {
+            let parentIndex = this.getParentIndex(i)
+            if (this.heap[i] < this.heap[parentIndex]) {
+                [this.heap[i], this.heap[parentIndex]] = [this.heap[parentIndex], this.heap[i]]
+                i=parentIndex
+            } else {
+                break
+            }
+        }
+    }
+}
+
+let heap = new Minheap()
+heap.insert(1)
+console.log(heap)
